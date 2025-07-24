@@ -12,15 +12,27 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Machine Learning Libraries
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder, OneHotEncoder
-from sklearn.impute import SimpleImputer
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+# Supervised Learning (Classification & Regression)
+from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.svm import SVC, SVR
+from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, GradientBoostingClassifier, GradientBoostingRegressor
+
+# Unsupervised Learning (Clustering & Dimensionality Reduction)
+from sklearn.cluster import KMeans, DBSCAN
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+
+# Metrics (Classification & Regression)
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report  # Classification
+from sklearn.metrics import mean_squared_error, r2_score  # Regression
+from sklearn.metrics import silhouette_score  # Clustering
+
+#Model Training and Evaluation
+For Classification → Use LogisticRegression, SVC, etc.
+For Regression → Use LinearRegression, SVR, etc.
+For Clustering → Use KMeans, DBSCAN, etc.
 
 # Model Saving
 import joblib
